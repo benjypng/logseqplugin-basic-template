@@ -1,27 +1,33 @@
 {
-  "name": "test",
-  "version": "1.0",
-  "description": "",
-  "main": "dist/index.html",
-  "targets": {
-    "main": false
+  "name": "logseq-<insert name>-plugin",
+  "author": "hkgnp",
+  "description": "<insert description>",
+  "logseq": {
+    "id": "logseq-<insert name>-plugin",
+    "title": "logseq-<insert name>-plugin",
+    "icon": "./icon.svg",
+    "main": "dist/index.html"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build --no-source-maps src/index.html --public-url ./"
+    "start:dev": "npm i @logseq/libs -S && npm i @types/eslint @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-prettier prettier vite vite-plugin-logseq",
+    "dev": "npx vite",
+    "build": "npx tsc && npx vite build",
+    "preview": "npx vite preview"
   },
-  "keywords": [],
-  "author": "hkgnp",
-  "license": "MIT",
-  "dependencies": {
-    "@logseq/libs": "latest"
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "logseq-<insert name>-plugin.zip"
+          ]
+        }
+      ]
+    ]
   },
-  "logseq": {
-    "id": "test",
-    "title": "test",
-    "icon": ""
-  },
-  "devDependencies": {
-    "parcel": "latest"
-  }
+  "license": "MIT"
 }
