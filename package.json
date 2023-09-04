@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev:start": "npm i @logseq/libs -S && npm i @types/eslint @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-prettier prettier vite vite-plugin-logseq -D",
-    "dev:tailwind": "npm i tailwindcss cssnano -D && touch tailwind.config.js && touch .postcssrc.cjs && touch src/tailwind.css",
+    "dev:tailwind": "npm i tailwindcss cssnano autoprefixer -D && touch tailwind.config.js && touch .postcssrc.cjs && touch src/tailwind.css",
     "dev": "npx vite",
     "build": "npx tsc && npx vite build",
     "preview": "npx vite preview"
