@@ -1,6 +1,10 @@
 # Overview
 
-Easily rename date pages when you change your preferred date format.
+Describe your plugin.
+
+# Usage
+
+How to use your plugin.
 
 # Installation
 
