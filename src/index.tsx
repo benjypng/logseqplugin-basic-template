@@ -1,4 +1,5 @@
 import '@logseq/libs'
+
 import { handlePopup } from './handle-popup'
 import { settings } from './settings'
 
