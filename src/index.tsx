@@ -8,6 +8,9 @@ const main = async () => {
 
   // Used to handle any popups
   handlePopup()
+
+  // Check if plugin is being used on the DB version
+  const { supportDb } = await logseq.App.getInfo()
 }
 
 logseq.useSettingsSchema(settings).ready(main).catch(console.error)
