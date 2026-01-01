@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "bunx vite",
-    "build": "bunx run build",
+    "build": "bunx vite build",
     "build:plugin": "bunx eslint . --fix && bunx tsc && bunx vite build",
     "prepare": "husky",
     "lint:precommit": "echo \"Running eslint\" && bunx eslint . --fix && echo \"Running tsc\" && tsc && echo \"Running build\" && bun run build"
