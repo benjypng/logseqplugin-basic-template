@@ -10,7 +10,7 @@ const main = async () => {
   handlePopup()
 
   // Check if plugin is being used on the DB version
-  const { supportDb } = await logseq.App.getInfo()
+  const isDbGraph = await logseq.App.checkCurrentIsDbGraph()
 }
 
 logseq.useSettingsSchema(settings).ready(main).catch(console.error)
